@@ -17,7 +17,7 @@ import musicFile from "./assets/lolota.mpeg";
 
 export default function App() {
   const [audio] = useState(new Audio(musicFile));
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [setIsPlaying] = useState(false);
   const [started, setStarted] = useState(false);
   const [showLetter, setShowLetter] = useState(false);
   const [text, setText] = useState("");
@@ -88,14 +88,6 @@ Will you keep choosing me every single day? 💍`;
       });
 
     setStarted(true);
-  };
-
-  const toggleMusic = () => {
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-    }
   };
 
   return (
