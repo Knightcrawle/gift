@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import centerImg from "./assets/middle.jpg";
 import leftImg from "./assets/left.jpg";
 import rightImg from "./assets/right.jpg";
-import pic1 from "./assets/fav.jpg";
+import pic1 from "./assets/lv.jpg";
 import pic2 from "./assets/close.jpg";
 import pic3 from "./assets/up.jpg";
 import pic4 from "./assets/down.jpg";
