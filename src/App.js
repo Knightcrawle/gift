@@ -113,17 +113,17 @@ Will you keep choosing me every single day? 💍`;
         <div style={{ position: "relative", width: "100%", height: "100vh" }}>
           {/* Floating Images */}
           <FloatingImage src={pic1} top="10%" left="8%" rotate={-15} />
-          <FloatingImage src={pic2} top="15%" left="80%" rotate={12} />
+          <FloatingImage src={pic2} top="10%" left="85%" rotate={12} />
           <FloatingImage src={pic3} top="70%" left="5%" rotate={18} />
           <FloatingImage src={pic4} top="75%" left="82%" rotate={-18} />
-          <FloatingImage src={leftImg} top="45%" left="5%" rotate={-10} />
-          <FloatingImage src={rightImg} top="45%" left="85%" rotate={10} />
+          <FloatingImage src={leftImg} top="45%" left="10%" rotate={-10} />
+          <FloatingImage src={rightImg} top="45%" left="80%" rotate={10} />
 
           {/* NEW Floating Images */}
-          <FloatingImage src={pic5} top="20%" left="40%" rotate={5} />
-          <FloatingImage src={pic6} top="60%" left="35%" rotate={-8} />
-          <FloatingImage src={pic7} top="30%" left="65%" rotate={10} />
-          <FloatingImage src={pic9} top="50%" left="50%" rotate={0} />
+          <FloatingImage src={pic5} top="18%" left="20%" rotate={5} />
+          <FloatingImage src={pic6} top="60%" left="23%" rotate={-8} />
+          <FloatingImage src={pic7} top="18%" left="70%" rotate={10} />
+          <FloatingImage src={pic9} top="60%" left="65%" rotate={0} />
 
           {/* BIGGER CENTER HEART */}
           <motion.div
@@ -154,8 +154,8 @@ Will you keep choosing me every single day? 💍`;
               {/* Image inside heart */}
               <image
                 href={centerImg}
-                width="512"
-                height="512"
+                width="500"
+                height="700"
                 clipPath="url(#heartClip)"
                 preserveAspectRatio="xMidYMid slice"
               />
