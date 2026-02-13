@@ -13,11 +13,20 @@ import pic6 from "./assets/looks.jpg"; // new
 import pic7 from "./assets/feel.jpg"; // new
 import pic9 from "./assets/stay.jpg"; // new
 
+import musicFile from "./assets/lolota.mpeg";
+
 export default function App() {
+  const [audio] = useState(new Audio(musicFile));
+  const [isPlaying, setIsPlaying] = useState(false);
   const [started, setStarted] = useState(false);
   const [showLetter, setShowLetter] = useState(false);
   const [text, setText] = useState("");
   const [textColor, setTextColor] = useState("white");
+
+  useEffect(() => {
+    audio.loop = true;
+    audio.volume = 0.5;
+  }, [audio]);
 
   // Color changing effect every 3 seconds
   useEffect(() => {
@@ -68,6 +77,27 @@ Will you keep choosing me every single day? 💍`;
     }
   }, [showLetter, fullText]);
 
+  const startSurprise = () => {
+    audio
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+      })
+      .catch((err) => {
+        console.log("Autoplay blocked:", err);
+      });
+
+    setStarted(true);
+  };
+
+  const toggleMusic = () => {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  };
+
   return (
     <div
       style={{
@@ -96,7 +126,13 @@ Will you keep choosing me every single day? 💍`;
           >
             I Made Something For You 💖
           </h1>
-          <button onClick={() => setStarted(true)} style={buttonStyle()}>
+          <button
+            onClick={() => {
+              startSurprise();
+              setStarted(true);
+            }}
+            style={buttonStyle()}
+          >
             Click To Open Surprise
           </button>
         </div>
