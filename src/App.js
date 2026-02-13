@@ -66,7 +66,7 @@ Will you keep choosing me every single day? 💍`;
       }, 25);
       return () => clearInterval(interval);
     }
-  }, [showLetter]);
+  }, [showLetter, fullText]);
 
   return (
     <div
